@@ -86,6 +86,11 @@ class WakelockApi {
     final Map<Object?, Object?>? replyMap =
         await channel.send(<Object>[arg_msg]) as Map<Object?, Object?>?;
     if (replyMap == null) {
+      throw PlatformException(
+        code: 'channel-error',
+        message: 'Unable to establish connection on channel.',
+        details: null,
+      );
     } else if (replyMap['error'] != null) {
       final Map<Object?, Object?> error =
           (replyMap['error'] as Map<Object?, Object?>?)!;
