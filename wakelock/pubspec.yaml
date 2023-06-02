@@ -4,6 +4,8 @@ description: >-2
   Android, iOS, macOS, Windows, and web.
 version: 0.7.0
 repository: https://github.com/creativecreatorormaybenot/wakelock/tree/main/wakelock
+publish_to: none
+
 
 environment:
   sdk: '^3.0.0'
@@ -16,7 +18,7 @@ dependencies:
 
   wakelock_platform_interface: 
     git:
-      url: https://github.com/miguelmato/wakelock
+      url: git@github.com:grisoftware/wakelock.git
       ref: main
       path: wakelock_platform_interface
 
