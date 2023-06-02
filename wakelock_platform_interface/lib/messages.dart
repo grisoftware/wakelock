@@ -86,7 +86,6 @@ class WakelockApi {
     final Map<Object?, Object?>? replyMap =
         await channel.send(<Object>[arg_msg]) as Map<Object?, Object?>?;
     if (replyMap == null) {
-      log('channel-error, package will be work don\'t worry');
     } else if (replyMap['error'] != null) {
       final Map<Object?, Object?> error =
           (replyMap['error'] as Map<Object?, Object?>?)!;
